@@ -33,7 +33,7 @@ export default function Profile() {
 
     async function handleTerminarTarefa(id) {
         try{
-            await api.delete(`incidents/${id}`, {
+            await api.delete(`tb_tarefas/${id}`, {
                 headers: {
                     Authorization: ongId,
                 }

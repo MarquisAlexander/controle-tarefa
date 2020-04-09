@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable('incidents', function (table){
+    return knex.schema.createTable('tb_tarefas', function (table){
         table.increments();
 
         table.string('title').notNullable();
@@ -14,5 +14,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTable('incidents');
+    return knex.schema.dropTable('tb_tarefas');
 };

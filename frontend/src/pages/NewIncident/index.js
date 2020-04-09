@@ -19,14 +19,15 @@ export default function NewIncident() {
 
     async function handleNewIncident(e) {
         e.preventDefault();
-
+        
         const data = {
             title,
             description,
             prioridade,
         };
+        console.log(data);
         try{ 
-            await api.post('incidents', data, {
+            await api.post('tb_tarefas', data, {
                 headers: {
                     Authorization: ongId,
                 }
