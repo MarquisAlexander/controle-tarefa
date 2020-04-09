@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { FaCalendarCheck }from "react-icons/fa"
 
 import api from '../../services/api';
 
@@ -30,7 +31,7 @@ export default function Profile() {
 
     }, [ongId])
 
-    async function handleDeleteIncident(id) {
+    async function handleTerminarTarefa(id) {
         try{
             await api.delete(`incidents/${id}`, {
                 headers: {
@@ -76,8 +77,8 @@ export default function Profile() {
                     <strong>Prioridade:</strong>
                     <p>{incident.prioridade}</p>
 
-                    <button onClick={() => handleDeleteIncident(incident.id)}type="button">
-                        <FiTrash2 size={20} color="#a8a8b3" />
+                    <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
+                        <FaCalendarCheck size={40} color="#0078E7"/>
                     </button>
                 </li>
                 ))}

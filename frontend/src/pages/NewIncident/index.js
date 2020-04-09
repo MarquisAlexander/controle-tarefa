@@ -45,8 +45,8 @@ export default function NewIncident() {
                 <section>
                     <img src={logoImg} alt="tarefa"/>
 
-                    <h1>Cadastrar novo caso</h1>
-                    <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso</p>
+                    <h1>Cadastrar novas tarefas</h1>
+                    <p>Descreva a tarefa detalhadamente para uma melhor compreensão no futuro</p>
                     
                     <Link className="back-link" to="/profile">
                         <FiArrowLeft size={16} color="#0078E7"/>
@@ -66,9 +66,9 @@ export default function NewIncident() {
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
-
+                    <p>Qual a prioridade da tarefa</p>
                     <input 
-                        placeholder="prioridade"
+                        placeholder="Alta, Média, Baixa"
                         value={prioridade}
                         onChange={e => setPrioridade(e.target.value)}
                     />
