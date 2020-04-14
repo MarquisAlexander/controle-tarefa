@@ -12,7 +12,6 @@ export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
-    //const [prioridade, setPrioridade] = useState('');
 
     const history = useHistory();
 

@@ -77,9 +77,17 @@ export default function Profile() {
                     <strong>Prioridade:</strong>
                     <p>{incident.prioridade}</p>
 
+                    <strong>Responsavel:</strong>
+                    <p>{incident.responsavel}</p>
+
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
                         <FaCalendarCheck size={40} color="#0078E7"/>
                     </button>
+                    
+                    <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
+                        <FiTrash2 size={40} color="#0078E7" />
+                    </button>
+                
                 </li>
                 ))}
             </ul>

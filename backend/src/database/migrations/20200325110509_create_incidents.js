@@ -6,6 +6,7 @@ exports.up = function(knex) {
         table.string('title').notNullable();
         table.string('description').notNullable();
         table.string('prioridade').notNullable();
+        table.string('responsavel').notNullable();
 
         table.string('ong_id').notNullable();
 

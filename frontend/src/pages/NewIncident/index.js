@@ -12,6 +12,7 @@ export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [prioridade, setPrioridade] = useState('');
+    const [responsavel, setResponsavel] = useState('');
 
     const history = useHistory();
 
@@ -24,6 +25,7 @@ export default function NewIncident() {
             title,
             description,
             prioridade,
+            responsavel,
         };
         console.log(data);
         try{ 
@@ -72,6 +74,12 @@ export default function NewIncident() {
                         placeholder="Alta, Média, Baixa"
                         value={prioridade}
                         onChange={e => setPrioridade(e.target.value)}
+                    />
+
+                    <input 
+                        placeholder="Responsavel"
+                        value={responsavel}
+                        onChange={e => setResponsavel(e.target.value)}
                     />
 
 

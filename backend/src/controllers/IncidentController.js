@@ -24,13 +24,14 @@ module.exports = {
 
 
     async create(request, response) {
-        const { title, description, prioridade } = request.body;
+        const { title, description, prioridade, responsavel } = request.body;
         const ong_id = request.headers.authorization;
 
         const [id] = await connection('tb_tarefas').insert({
             title,
             description,
             prioridade,
+            responsavel,
             ong_id,
         });
 
