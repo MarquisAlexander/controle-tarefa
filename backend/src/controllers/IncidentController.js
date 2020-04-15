@@ -7,14 +7,14 @@ module.exports = {
         const [count] = await connection('tb_tarefas').count();
 
         const tb_tarefas = await connection('tb_tarefas')
-        .join('ongs', 'ongs.id', '=', 'tb_tarefas.ong_id')
+        .join('users', 'users.id', '=', 'tb_tarefas.user_id')
         .limit(5)
         .offset((page -1) *5)
         .select([
         'tb_tarefas.*',
-        'ongs.name',
-        'ongs.email',
-        'ongs.whatsapp',
+        'users.name',
+        'users.email',
+        'users.whatsapp',
         ]);
 
         response.header('X-Toral-Count', count['count(*)']);
@@ -25,14 +25,14 @@ module.exports = {
 
     async create(request, response) {
         const { title, description, prioridade, responsavel } = request.body;
-        const ong_id = request.headers.authorization;
+        const user_id = request.headers.authorization;
 
         const [id] = await connection('tb_tarefas').insert({
             title,
             description,
             prioridade,
             responsavel,
-            ong_id,
+            user_id,
         });
 
         return response.json({ id });
@@ -40,14 +40,14 @@ module.exports = {
 
     async delete(request, response) {
         const { id } = request.params;
-        const ong_id = request.headers.authorization;
+        const user_id = request.headers.authorization;
 
         const incident = await connection('tb_tarefas')
             .where('id', id)
-            .select('ong_id')
+            .select('user_id')
             .first();
 
-            if (incident.ong_id != ong_id) {
+            if (incident.user_id != user_id) {
                 return response.status(401).json({error: 'Você não tem permissão para isso'});
             }
 

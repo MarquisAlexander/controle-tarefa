@@ -13,8 +13,8 @@ export default function Profile() {
     const [incidents, setIncidents] = useState([]);
 
 
-    const ongId = localStorage.getItem('ongId');
-    const ongName = localStorage.getItem('ongName');
+    const userId = localStorage.getItem('userId');
+    const userName = localStorage.getItem('userName');
 
     const history = useHistory()
 
@@ -23,19 +23,19 @@ export default function Profile() {
     useEffect(() => {
         api.get('profile', {
             headers: {
-                Authorization: ongId,
+                Authorization: userId,
             }
         }).then(response => {
             setIncidents(response.data)
         })
 
-    }, [ongId])
+    }, [userId])
 
     async function handleTerminarTarefa(id) {
         try{
             await api.delete(`tb_tarefas/${id}`, {
                 headers: {
-                    Authorization: ongId,
+                    Authorization: userId,
                 }
             });
 
@@ -55,7 +55,7 @@ export default function Profile() {
         <div className="profile-container">
             <header>
                 <img src={logoImg} alt="Be The Hero" />
-                <span> Bem vindo(a), {ongName}</span>
+                <span> Bem vindo(a), {userName}</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar nova tarefa</Link>
                 <button onClick={handleLogout}type="button">
@@ -77,14 +77,16 @@ export default function Profile() {
                     <strong>Prioridade:</strong>
                     <p>{incident.prioridade}</p>
 
-                    <strong>Responsavel:</strong>
+                    <strong>Responsável:</strong>
                     <p>{incident.responsavel}</p>
 
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
-                        <FaCalendarCheck size={40} color="#0078E7"/>
+                        <p>Concluir</p>
+                        <FaCalendarCheck size={40} color="#0078E7" />
                     </button>
                     
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
+                        <p>Apagar</p>
                         <FiTrash2 size={40} color="#0078E7" />
                     </button>
                 

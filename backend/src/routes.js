@@ -9,10 +9,10 @@ const routes = express.Router();
 
 routes.post('/sessions', SessionController.create);
 
-//rota para listagem das ongs cadastradas
-routes.get('/ongs', OngController.index);
-//rota para cadastro de ongs
-routes.post('/ongs', OngController.create);
+//rota para listagem das users cadastradas
+routes.get('/users', OngController.index);
+//rota para cadastro de users
+routes.post('/users', OngController.create);
 
 routes.get('/profile', ProfileController.index);
 

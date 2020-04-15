@@ -7,7 +7,6 @@ import api from '../../services/api.js';
 import './styles.css';
 
 import logoImg from '../../assets/logo.svg'
-//import heroesImg from '../../assets/heroes.png'
 
 export default function Logon() {
     const [id, setId] = useState('');
@@ -19,8 +18,8 @@ export default function Logon() {
         try{
             const response = await api.post("sessions", { id });
 
-            localStorage.setItem('ongId', id);
-            localStorage.setItem('ongName', response.data.name);
+            localStorage.setItem('userId', id);
+            localStorage.setItem('userName', response.data.name);
 
             history.push('/profile');
         } catch (err) {

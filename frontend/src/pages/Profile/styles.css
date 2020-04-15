@@ -36,7 +36,8 @@
 }
 
 .profile-container header button:hover {
-    border-color: #999;
+    border-color: #DB3B3B;
+    opacity: 1;
 }
 
 .profile-container h1 {
@@ -62,23 +63,27 @@
     position: absolute;
     right: 24px;
     top: 24px;
-    border: 0;
+    border: 1px solid #dcdce6;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.profile-container ul li button:hover {
+    color: #80C55F;
+    border-color: #80C55F;
+    opacity: 0.9;
 }
 
 .profile-container ul li button + button {
     position: absolute;
     right: 24px;
-    top: 80px;
-    border: 0;
-}
+    top: 230px;
 
-.profile-container ul li button:hover {
-    opacity: 0.8;
 }
 
 .profile-container ul li strong {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     color: #41414d;
 }
 
@@ -87,6 +92,8 @@
 }
 
 .profile-container ul li p {
+    margin-left: 10px;
+    margin-right: 10px;
     color: #737380;
     line-height: 21px;
     font-size: 16px;

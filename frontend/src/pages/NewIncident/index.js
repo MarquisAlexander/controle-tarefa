@@ -16,7 +16,7 @@ export default function NewIncident() {
 
     const history = useHistory();
 
-    const ongId = localStorage.getItem('ongId');
+    const  userId = localStorage.getItem('userId');
 
     async function handleNewIncident(e) {
         e.preventDefault();
@@ -31,7 +31,7 @@ export default function NewIncident() {
         try{ 
             await api.post('tb_tarefas', data, {
                 headers: {
-                    Authorization: ongId,
+                    Authorization: userId,
                 }
             })
 
@@ -77,7 +77,7 @@ export default function NewIncident() {
                     />
 
                     <input 
-                        placeholder="Responsavel"
+                        placeholder="Responsável pela tarefa"
                         value={responsavel}
                         onChange={e => setResponsavel(e.target.value)}
                     />

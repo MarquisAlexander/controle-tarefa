@@ -1,4 +1,4 @@
-
+//npx knex migrate:latest
 exports.up = function(knex) {
     return knex.schema.createTable('tb_tarefas', function (table){
         table.increments();
@@ -8,9 +8,9 @@ exports.up = function(knex) {
         table.string('prioridade').notNullable();
         table.string('responsavel').notNullable();
 
-        table.string('ong_id').notNullable();
+        table.string('user_id').notNullable();
 
-        table.foreign('ong_id').references('id').inTable('ongs');
+        table.foreign('user_id').references('id').inTable('ongs');
     });
 };
 
