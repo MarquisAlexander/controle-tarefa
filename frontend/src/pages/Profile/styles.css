@@ -60,25 +60,28 @@
 }
 
 .profile-container ul li button{
+    color: #80C55F;
     position: absolute;
     right: 24px;
     top: 24px;
-    border: 1px solid #dcdce6;
+    border: 0px solid #dcdce6;
     border-radius: 10px;
     background: transparent;
 }
 
 .profile-container ul li button:hover {
-    color: #80C55F;
-    border-color: #80C55F;
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
 .profile-container ul li button + button {
     position: absolute;
     right: 24px;
-    top: 230px;
+    top: 250px;
 
+}
+
+.profile-container ul li button + button:hover {
+    opacity: 0.6;
 }
 
 .profile-container ul li strong {

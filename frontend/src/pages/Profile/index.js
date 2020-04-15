@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
-import { FaCalendarCheck }from "react-icons/fa"
+import { FaCalendarCheck, FaCheck }from "react-icons/fa"
 
 import api from '../../services/api';
 
@@ -81,13 +81,13 @@ export default function Profile() {
                     <p>{incident.responsavel}</p>
 
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
-                        <p>Concluir</p>
-                        <FaCalendarCheck size={40} color="#0078E7" />
+                        <p></p>
+                        <FaCheck size={40} color="#80C55F" />
                     </button>
                     
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
-                        <p>Apagar</p>
-                        <FiTrash2 size={40} color="#0078E7" />
+                        <p></p>
+                        <FiTrash2 size={40} color="#DB3B3B" />
                     </button>
                 
                 </li>
