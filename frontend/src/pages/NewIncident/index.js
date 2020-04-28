@@ -11,7 +11,7 @@ import './styles.css';
 export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [prioridade, setPrioridade] = useState('');
+    const [prioridade, setPrioridade] = useState("");
     const [responsavel, setResponsavel] = useState('');
 
     const history = useHistory();
@@ -69,12 +69,11 @@ export default function NewIncident() {
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
-                    <p>Qual a prioridade da tarefa</p>
+                    
                     <input 
-                        placeholder="Alta, Média, Baixa"
-                        value={prioridade}
-                        onChange={e => setPrioridade(e.target.value)}
-                    />
+                    placeholder="Prioridade"
+                    value={prioridade}
+                    onChange={e => setPrioridade(e.target.value)}/>
 
                     <input 
                         placeholder="Responsável pela tarefa"

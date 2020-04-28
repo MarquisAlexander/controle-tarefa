@@ -5,7 +5,7 @@ const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
 const SessionController = require('./controllers/SessionController');
 
-const routes = express.Router();
+const routes = express.Router('controletarefa.cb8wpsrs2beg.us-east-2.rds.amazonaws.com');
 
 routes.post('/sessions', SessionController.create);
 

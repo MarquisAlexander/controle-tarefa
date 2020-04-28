@@ -1,48 +1,51 @@
 // Update with your config settings.
+// npx knex migrate:latest --env production
 
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: './src/database/db.sqlite'
+      host: 'controletarefa.cb8wpsrs2beg.us-east-2.rds.amazonaws.com',
+      database: 'controletarefa',
+      user:     'marquissantos',
+      password: 'mm1234mm1234',
+      timeout: 100000
     },
+
     migrations: {
       directory: './src/database/migrations'
     },
-    useNullAsDefault: true,
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      host: 'controletarefa.cb8wpsrs2beg.us-east-2.rds.amazonaws.com',
+      database: 'controletarefa',
+      user:     'marquissantos',
+      password: 'mm1234mm1234',
+      timeout: 100000
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+
     migrations: {
-      tableName: 'knex_migrations'
-    }
+      directory: './src/database/migrations'
+    },
   },
 
   production: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      host: 'controletarefa.cb8wpsrs2beg.us-east-2.rds.amazonaws.com',
+      database: 'controletarefa',
+      user:     'marquissantos',
+      password: 'mm1234mm1234',
+      timeout: 100000
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+
     migrations: {
-      tableName: 'knex_migrations'
-    }
+      directory: './src/database/migrations'
+    },
   }
 
 };
