@@ -1,3 +1,12 @@
+.suportButton button1{
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    position:absolute; 
+    margin: 50px 0px ;
+    justify-content: space-between;
+}
+
 .profile-container {
     width: 100%;
     max-width: 1180px;
@@ -54,7 +63,7 @@
 
 .profile-container ul li {
     background: #fff;
-    padding: 24px;
+    padding: 30px;
     border-radius: 8px;
     position: relative;
 }
@@ -76,8 +85,7 @@
 .profile-container ul li button + button {
     position: absolute;
     right: 24px;
-    top: 250px;
-
+    top: 90px;
 }
 
 .profile-container ul li button + button:hover {

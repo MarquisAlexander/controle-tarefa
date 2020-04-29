@@ -52,9 +52,10 @@ export default function Profile() {
     }
 
     return (
+        <>
         <div className="profile-container">
             <header>
-                <img src={logoImg} alt="Be The Hero" />
+                <img src={logoImg} alt="minhas tarefas" />
                 <span> Bem vindo(a), {userName}</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar nova tarefa</Link>
@@ -84,16 +85,22 @@ export default function Profile() {
                         <p></p>
                         <FaCheck size={40} color="#80C55F" />
                     </button>
-                    
+                
                     <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
                         <p></p>
                         <FiTrash2 size={40} color="#DB3B3B" />
                     </button>
-                
+              
                 </li>
                 ))}
             </ul>
-
+            <div className="suportButton">
+                    <button1 onClick={handleLogout}type="buttonSuport">
+                    <FiPower size={18} color="#0078E7" /> Entre em contato com a nossa equipe
+                </button1>
         </div>
+        </div>
+
+</>
     );
 }
