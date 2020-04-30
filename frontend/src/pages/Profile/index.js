@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
-import { FaCalendarCheck, FaCheck }from "react-icons/fa"
+import { FaCalendarCheck, FaCheck, FaInbox }from "react-icons/fa";
 
 import api from '../../services/api';
 
@@ -51,6 +51,11 @@ export default function Profile() {
         history.push('/');
     }
 
+    function handleBackProfile() {
+
+        history.push('/suport');
+    }
+
     return (
         <>
         <div className="profile-container">
@@ -95,9 +100,9 @@ export default function Profile() {
                 ))}
             </ul>
             <div className="suportButton">
-                    <button1 onClick={handleLogout}type="buttonSuport">
-                    <FiPower size={18} color="#0078E7" /> Entre em contato com a nossa equipe
-                </button1>
+                    <button onClick={handleBackProfile} type="buttonSuport">
+                    <FaInbox size={30} color="#0078E7" /> <p>Entre em contato com a nossa equipe</p>
+                </button>
         </div>
         </div>
 
