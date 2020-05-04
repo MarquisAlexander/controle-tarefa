@@ -37,7 +37,7 @@
 }
 
 .profile-container-suport header button:hover {
-    border-color: #DB3B3B;
+    border-color: #0078e7;
     opacity: 1;
 }
 
@@ -74,30 +74,42 @@
     opacity: 0.6;
 }
 
-.profile-container-suport ul li button + button {
-    position: absolute;
-    right: 24px;
-    top: 90px;
+.profile-container-suport .endpag {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 5%;
 }
 
 .profile-container-suport ul li button + button:hover {
     opacity: 0.6;
 }
 
-.profile-container-suport ul li strong {
-    display: block;
+.profile-container-suport .email {
+    margin-left: 5%;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
     margin-bottom: 5px;
-    color: #41414d;
 }
 
-.profile-container-suport ul li p + strong {
-    margin-top: 32px;
+.profile-container-suport text {
+    margin-left: 1%;
+    font-size: 30px;
 }
 
-.profile-container-suport ul li p {
-    margin-left: 10px;
+.profile-container-suport  p {
+    margin-left: 5%;
     margin-right: 10px;
     color: #737380;
     line-height: 21px;
     font-size: 16px;
+}
+
+.text-title {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #737380;
+    font-size: 50px;
 }

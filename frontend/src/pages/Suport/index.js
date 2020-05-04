@@ -21,18 +21,30 @@ export default function Suport() {
             <header>
                 <div className="buttonBack">
                     <button onClick={handleBackProfile} type="buttonSuport">
-                <FaLongArrowAltLeft size={40} color="#0078e7" />
-                </button>
+                        <FaLongArrowAltLeft size={40} color="#0078e7" />
+                    </button>
                 </div>
                 <img src={logoImg} alt="minhas tarefas" />
             </header>
-        <div>
-            <div className="suportButton">
-                
-                    <FaInbox size={100} color="#0078e7" />
-                
-            </div>
+        <div className="text-title">   
+                    Você tem uma IDEIA? ÓTIMO!
         </div>
+                <p>A sua opinião é de extrema importancia para o nossa equipe 
+                   de desenvolvimento💻.
+                </p>
+                <p>
+                Caso você tenha alguma dica de funcionalidade ou estilo, por favor
+                compartilhe ela, vamos ficar extremamente grato.
+                </p>
+
+                    <div className="email">
+                        <FaInbox size={40} color="#0078e7" />
+                        <text>marquissantos123@gmail.com</text>
+                    </div>
+                <div className="endpag">
+                Obrigado por utilizar a nossa solução!
+                </div>
+    
         </div>
         </>
     )
