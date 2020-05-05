@@ -3,9 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 
-import { FaLongArrowAltLeft, FaInbox } from 'react-icons/fa';
+import { FaLongArrowAltLeft, FaInbox, FaLinkedin } from 'react-icons/fa';
 
 import logoImg from '../../assets/logo.svg';
+import illustration from '../../assets/illustration.png';
 
 export default function Suport() {
 
@@ -27,9 +28,9 @@ export default function Suport() {
                 <img src={logoImg} alt="minhas tarefas" />
             </header>
         <div className="text-title">   
-                    Você tem uma IDEIA? ÓTIMO!
+                    Você tem uma ideia? ÓTIMO!
         </div>
-                <p>A sua opinião é de extrema importancia para o nossa equipe 
+                <p>A sua opinião é de extrema importancia para a nossa equipe 
                    de desenvolvimento💻.
                 </p>
                 <p>
@@ -38,14 +39,19 @@ export default function Suport() {
                 </p>
 
                     <div className="email">
-                        <FaInbox size={40} color="#0078e7" />
+                        <FaInbox size={50} color="#0078e7" />
                         <text>marquissantos123@gmail.com</text>
                     </div>
+                    <div className="linkedin">
+                        <FaLinkedin size={50} color="#0078e7" />
+                        <text>marquissantos123@gmail.com</text>
+                    </div>
+                
+    
+        </div>
                 <div className="endpag">
                 Obrigado por utilizar a nossa solução!
                 </div>
-    
-        </div>
         </>
     )
 }

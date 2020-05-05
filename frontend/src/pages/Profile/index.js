@@ -99,13 +99,12 @@ export default function Profile() {
                 </li>
                 ))}
             </ul>
-            <div className="suportButton">
-                    <button onClick={handleBackProfile} type="buttonSuport">
+        </div>
+        <div className="suportButton">
+                    <button onClick={handleBackProfile}>
                     <FaInbox size={30} color="#0078E7" /> <p>Entre em contato com a nossa equipe</p>
                 </button>
-        </div>
-        </div>
-
+        </div>     
 </>
     );
 }

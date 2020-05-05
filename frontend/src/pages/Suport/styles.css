@@ -1,5 +1,17 @@
+.teste{
+overflow:hidden;
+width:200px;
+float:left;
+float:right;
+margin-bottom: 50px;
+}
+
 .profile-container-suport {
-    width: 100%;
+    background-image: url("../../assets/illustration.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
     max-width: 1180px;
     padding: 0 30px;
     margin: 32px auto;
@@ -74,11 +86,11 @@
     opacity: 0.6;
 }
 
-.profile-container-suport .endpag {
+.endpag {
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-top: 5%;
+    margin-top: auto;
 }
 
 .profile-container-suport ul li button + button:hover {
@@ -86,8 +98,15 @@
 }
 
 .profile-container-suport .email {
-    margin-left: 5%;
-    margin-top: 10%;
+    margin-left: 10%;
+    margin-top: 12%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.profile-container-suport .linkedin {
+    margin-left: 10%;
     display: flex;
     align-items: center;
     margin-bottom: 5px;
@@ -99,11 +118,19 @@
 }
 
 .profile-container-suport  p {
-    margin-left: 5%;
+    height: 100px;
+    width: 80%;
+    margin-top: 35px;
+    margin-left: 10%;
     margin-right: 10px;
     color: #737380;
-    line-height: 21px;
-    font-size: 16px;
+    font-size: 36px;
+}
+
+.profile-container-suport  p + p {
+
+    margin-top: 3px;
+
 }
 
 .text-title {
@@ -111,5 +138,5 @@
     justify-content:center;
     align-items:center;
     color: #737380;
-    font-size: 50px;
+    font-size: 36px;
 }

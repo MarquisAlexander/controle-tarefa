@@ -5,8 +5,7 @@
     border-radius: 4px;
     border: 10px solid #dcdce6;
     position:absolute; 
-    margin: 50px 0px ;
-    justify-content: space-between;
+    margin: 50px 9% ;
 }
 
 .suportButton button p {
@@ -17,6 +16,7 @@
 .profile-container {
     width: 100%;
     max-width: 1180px;
+    min-height: 480px;
     padding: 0 30px;
     margin: 32px auto;
 }
