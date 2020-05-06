@@ -7,9 +7,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: #fff;
+    background-image: url("../../assets/illustrations_start.png");
+    background-repeat: no-repeat;
+    background-position: 98%;
+    
+    background-position-y: bottom;
+    background-size: 40%;
+    
 }
 
 .logon-container section.form{
+    
     width: 100%;
     max-width: 350px;
     margin-right: 30px;
