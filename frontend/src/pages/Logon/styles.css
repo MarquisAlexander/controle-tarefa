@@ -1,20 +1,15 @@
 .logon-container {
     width: 100%;
-    max-height: 1120px;
     height: 100vh;
-    margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: #fff;
+    background-color: #f0f0f5;
     background-image: url("../../assets/illustrations_start.png");
     background-repeat: no-repeat;
-    background-position: 98%;
-    
+    background-position-x: left;
     background-position-y: bottom;
-    background-size: 40%;
+    background-size: 43%;
     
 }
 

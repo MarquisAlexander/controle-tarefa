@@ -11,12 +11,22 @@ import './styles.css';
 export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [prioridade, setPrioridade] = useState("");
+    const [prioridade, setPrioridade] = useState('');
     const [responsavel, setResponsavel] = useState('');
 
     const history = useHistory();
 
     const  userId = localStorage.getItem('userId');
+
+ 
+    function prioBaixa(e) {
+        e.preventDefault();
+
+        const prioridade = ("Baixa");
+
+        console.log(prioridade);
+    }
+
 
     async function handleNewIncident(e) {
         e.preventDefault();
@@ -83,7 +93,18 @@ export default function NewIncident() {
 
 
                     <button className="button" type="submit">Cadastrar</button>
+
+                    <button className="button" type="submit" value={'Baixa'}
+                    onClick={e => setPrioridade(e.target.value)}
+                    >teste1</button>
+
+<button className="button" type="submit" value={'Alta'}
+                    onClick={e => setPrioridade(e.target.value)}
+                    >teste1</button>
                 </form>
+            
+                
+                    
             </div>
         </div>
     );
