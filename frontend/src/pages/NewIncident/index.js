@@ -18,16 +18,6 @@ export default function NewIncident() {
 
     const  userId = localStorage.getItem('userId');
 
- 
-    function prioBaixa(e) {
-        e.preventDefault();
-
-        const prioridade = ("Baixa");
-
-        console.log(prioridade);
-    }
-
-
     async function handleNewIncident(e) {
         e.preventDefault();
         
@@ -50,7 +40,6 @@ export default function NewIncident() {
             alert('erro ao cadastrar caso, tente novamente');
         }
     }
-
 
     return (
         <div className="new-incident-container">
@@ -79,11 +68,6 @@ export default function NewIncident() {
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
-                    
-                    <input 
-                    placeholder="Prioridade"
-                    value={prioridade}
-                    onChange={e => setPrioridade(e.target.value)}/>
 
                     <input 
                         placeholder="Responsável pela tarefa"
@@ -91,20 +75,24 @@ export default function NewIncident() {
                         onChange={e => setResponsavel(e.target.value)}
                     />
 
+                    <p> 
+                        Para finalizar a criação da tarefa, defina qual
+                        é a sua prioridade.
+                    </p>
 
-                    <button className="button" type="submit">Cadastrar</button>
+                        <button className="buttonPrioridadeBaixa" type="submit" value={'Baixa'}
+                        onClick={e => setPrioridade(e.target.value)}
+                        >Baixa</button>
 
-                    <button className="button" type="submit" value={'Baixa'}
-                    onClick={e => setPrioridade(e.target.value)}
-                    >teste1</button>
+                        <button className="buttonPrioridadeMedia" type="submit" value={'Média'} margin-left="11"
+                        onClick={e => setPrioridade(e.target.value)}
+                        >Média</button>
 
-<button className="button" type="submit" value={'Alta'}
-                    onClick={e => setPrioridade(e.target.value)}
-                    >teste1</button>
-                </form>
-            
-                
-                    
+                        <button className="buttonPrioridadeAlta" type="submit" value={'Alta'}
+                        onClick={e => setPrioridade(e.target.value)}
+                        >Alta</button>
+     
+                </form>          
             </div>
         </div>
     );

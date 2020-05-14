@@ -42,14 +42,84 @@
     max-width: 450px;
 }
 
-.new-incident-container .content form input
+.new-incident-container .content form input {
+    margin-top: 6px;
+}
+
 .new-incident-container .content form textarea{
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 .new-incident-container .content form p{
-    font-size: 18px;
+    font-size: 24px;
     color: #737380;
     line-height: 32px;
-    margin-top: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.buttonPrioridadeBaixa{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeBaixa:hover {
+    filter: brightness(60%)
+}
+
+.buttonPrioridadeMedia{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-left: 21px;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeMedia:hover {
+    filter: brightness(60%)
+}
+
+.buttonPrioridadeAlta{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-left: 21px;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeAlta:hover {
+    filter: brightness(60%)
 }
