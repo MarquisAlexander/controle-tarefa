@@ -81,3 +81,17 @@ form textarea {
 .back-link:hover {
     opacity: 0.8;
 }
+
+.button01 {
+    height: 60px;
+    background: #0078E7;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 4.0rem;
+}

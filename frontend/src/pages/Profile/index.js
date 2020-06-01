@@ -63,7 +63,7 @@ export default function Profile() {
                 <img src={logoImg} alt="minhas tarefas" />
                 <span> Bem vindo(a), {userName}</span>
 
-                <Link className="button" to="/incidents/new">Cadastrar nova tarefa</Link>
+                <Link className="button01" to="/incidents/new">Cadastrar nova tarefa</Link>
                 <button onClick={handleLogout}type="button">
                     <FiPower size={18} color="#0078E7" />
                 </button>

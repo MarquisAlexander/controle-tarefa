@@ -31,12 +31,13 @@ export default function Logon() {
         <div className="logon-container">
             <section className="form">
 
-                <img src={logoImg} alt="Be The Hero" />
+                <img src={logoImg} alt="Minhas tarefas" />
 
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
 
                     <input 
+                    maxlength="8"
                     placeholder="Sua ID"
                     value={id}
                     onChange={e => setId(e.target.value)}

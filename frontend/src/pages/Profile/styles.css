@@ -9,7 +9,8 @@
 }
 
 .suportButton button p {
-    margin-left: 20px;
+    font-size: 1.2rem;
+    margin-left: 1.4rem;
     color: #696969;
     
 }
@@ -28,7 +29,7 @@
 }
 
 .profile-container header span {
-    font-size: 20px;
+    font-size: 1.4rem;
     margin-left: 24px;
 }
 
@@ -58,8 +59,9 @@
 }
 
 .profile-container h1 {
+    font-size: 1.6em;
     margin-top: 80px;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
 }
 
 .profile-container ul {
@@ -101,6 +103,7 @@
 }
 
 .profile-container ul li strong {
+    font-size: 1.1rem;
     display: block;
     margin-bottom: 5px;
     color: #41414d;
@@ -115,5 +118,5 @@
     margin-right: 10px;
     color: #737380;
     line-height: 21px;
-    font-size: 16px;
+    font-size: 1rem;
 }
