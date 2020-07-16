@@ -2,17 +2,18 @@ const connection = require('../database/connection');
 
 module.exports = {
     async create(request, response) {
-        const { id } = request.body;
+        const { email } = request.body;
 
-        const ong = await connection('users')
-        .where('id', id)
+        const user = await connection('users')
+        .where('email', email)
         .select('name')
+        .select('id')
         .first();
 
-        if (!ong) {
-            return response.status(400).json({ error: 'No ONG found with this ID' });
+        if (!user) {
+            return response.status(400).json({ error: 'No User found with this Email' });
         }
 
-        return response.json(ong);
+        return response.json(user);
     }
 }

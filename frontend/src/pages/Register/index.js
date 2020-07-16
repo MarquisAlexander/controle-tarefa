@@ -12,6 +12,7 @@ export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
+    const [password, setPassword] = useState('');
 
     const history = useHistory();
 
@@ -22,6 +23,7 @@ export default function Register() {
             name,
             email,
             whatsapp,
+            password,
         };
 
         try{
@@ -33,6 +35,8 @@ export default function Register() {
         } catch(err){
             alert('Erro no cadastro tente novamente.');
         }
+
+        console.log(data);
     }
 
 
@@ -67,6 +71,11 @@ export default function Register() {
                     placeholder="Whatsapp"
                     value={whatsapp}
                     onChange={e => setWhatsapp(e.target.value)}
+                    />
+                    <input
+                    placeholder="Sua senha"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
                     />
 
                     <div className="input-group">
