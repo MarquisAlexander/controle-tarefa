@@ -24,13 +24,13 @@ module.exports = {
 
 
     async create(request, response) {
-        const { title, description, prioridade, responsavel } = request.body;
+        const { title, description, priority, responsavel } = request.body;
         const user_id = request.headers.authorization;
 
         const [id] = await connection('tb_tarefas').insert({
             title,
             description,
-            prioridade,
+            priority,
             responsavel,
             user_id,
         });
@@ -42,12 +42,12 @@ module.exports = {
         const { id } = request.params;
         const user_id = request.headers.authorization;
 
-        const incident = await connection('tb_tarefas')
+        const task = await connection('tb_tarefas')
             .where('id', id)
             .select('user_id')
             .first();
 
-            if (incident.user_id != user_id) {
+            if (task.user_id != user_id) {
                 return response.status(401).json({error: 'Você não tem permissão para isso'});
             }
 

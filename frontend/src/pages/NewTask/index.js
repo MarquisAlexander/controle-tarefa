@@ -8,23 +8,23 @@ import logoImg from '../../assets/logo.svg'
 
 import './styles.css';
 
-export default function NewIncident() {
+export default function NewTask() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [prioridade, setPrioridade] = useState('');
+    const [priority, setPriority] = useState('');
     const [responsavel, setResponsavel] = useState('');
 
     const history = useHistory();
 
     const  userId = localStorage.getItem('userId');
 
-    async function handleNewIncident(e) {
+    async function handleNewTask(e) {
         e.preventDefault();
         
         const data = {
             title,
             description,
-            prioridade,
+            priority,
             responsavel,
         };
         console.log(data);
@@ -56,7 +56,7 @@ export default function NewIncident() {
                     </Link>
                 </section>
 
-                <form onSubmit={handleNewIncident}>
+                <form onSubmit={handleNewTask}>
                     <input 
                         placeholder="Título da tarefa"
                         value={title}
@@ -81,15 +81,15 @@ export default function NewIncident() {
                     </p>
 
                         <button className="buttonPrioridadeBaixa" type="submit" value={'Baixa'}
-                        onClick={e => setPrioridade(e.target.value)}
+                        onClick={e => setPriority(e.target.value)}
                         >Baixa</button>
 
                         <button className="buttonPrioridadeMedia" type="submit" value={'Média'} margin-left="11"
-                        onClick={e => setPrioridade(e.target.value)}
+                        onClick={e => setPriority(e.target.value)}
                         >Média</button>
 
                         <button className="buttonPrioridadeAlta" type="submit" value={'Alta'}
-                        onClick={e => setPrioridade(e.target.value)}
+                        onClick={e => setPriority(e.target.value)}
                         >Alta</button>
      
                 </form>          

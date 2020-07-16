@@ -29,7 +29,10 @@ export default function Register() {
         try{
         const response = await api.post('users', data)
 
-        alert(`Seu ID de acesso: ${response.data.id}`)
+        alert(`Acesse essa plataforma usando o email ${response.data.email} e a senha que você criou.
+        Criamos uma identificação para o seu usuário, nossa equipe nunca solicita o seu ID, caso alguém o solicite, não passe essa informação
+        Seu ID: ${response.data.id}
+        `)
 
         history.push('/')
         } catch(err){

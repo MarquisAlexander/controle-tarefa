@@ -10,7 +10,7 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg'
 
 export default function Profile() {
-    const [incidents, setIncidents] = useState([]);
+    const [tasks, setTasks] = useState([]);
 
 
     const userId = localStorage.getItem('userId');
@@ -26,7 +26,7 @@ export default function Profile() {
                 Authorization: userId,
             }
         }).then(response => {
-            setIncidents(response.data)
+            setTasks(response.data)
         })
 
     }, [userId])
@@ -39,7 +39,7 @@ export default function Profile() {
                 }
             });
 
-        setIncidents(incidents.filter(incident => incident.id !== id));
+        setTasks(tasks.filter(task => task.id !== id));
         }catch(err) {
             alert('Erro ao deletar caso, tente novamente.')
         }
@@ -63,7 +63,7 @@ export default function Profile() {
                 <img src={logoImg} alt="minhas tarefas" />
                 <span> Bem vindo(a), {userName}</span>
 
-                <Link className="button01" to="/incidents/new">Cadastrar nova tarefa</Link>
+                <Link className="button01" to="/task/new">Cadastrar nova tarefa</Link>
                 <button onClick={handleLogout}type="button">
                     <FiPower size={18} color="#0078E7" />
                 </button>
@@ -72,26 +72,26 @@ export default function Profile() {
             <h1>Tarefas encontradas</h1>
 
             <ul>
-                {incidents.map(incident => (
-                    <li key={incident.id}>
+                {tasks.map(task => (
+                    <li key={task.id}>
                     <strong>Tarefa:</strong>
-                    <p>{incident.title}</p>
+                    <p>{task.title}</p>
 
                     <strong>DESCRIÇÃO:</strong>
-                    <p>{incident.description}</p>
+                    <p>{task.description}</p>
 
                     <strong>Prioridade:</strong>
-                    <p>{incident.prioridade}</p>
+                    <p>{task.priority}</p>
 
                     <strong>Responsável:</strong>
-                    <p>{incident.responsavel}</p>
+                    <p>{task.responsavel}</p>
 
-                    <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
+                    <button onClick={() => handleTerminarTarefa(task.id)}type="button">
                         <p></p>
                         <FaCheck size={40} color="#80C55F" />
                     </button>
                 
-                    <button onClick={() => handleTerminarTarefa(incident.id)}type="button">
+                    <button onClick={() => handleTerminarTarefa(task.id)}type="button">
                         <p></p>
                         <FiTrash2 size={40} color="#DB3B3B" />
                     </button>

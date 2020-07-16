@@ -22,6 +22,6 @@ module.exports = {
             password,
         })
     
-        return response.json({ id });
+        return response.json({ id, email });
     },
 };
