@@ -73,6 +73,7 @@ export default function Register() {
                     onChange={e => setWhatsapp(e.target.value)}
                     />
                     <input
+                    type="password"
                     placeholder="Sua senha"
                     value={password}
                     onChange={e => setPassword(e.target.value)}

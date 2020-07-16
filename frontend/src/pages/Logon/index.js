@@ -10,17 +10,18 @@ import logoImg from '../../assets/logo.svg'
 
 export default function Logon() {
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
 
     async function handleLogin(e) {
         e.preventDefault();
 
         try{
-            const response = await api.post("sessions", { email });
+            const response = await api.post("sessions", { email, password });
 
-            localStorage.setItem('userId', email );
+            localStorage.setItem('userEmail', email );
             localStorage.setItem('userName', response.data.name);
-            localStorage.setItem('userName', response.data.id);
+            localStorage.setItem('userId', response.data.id);
 
             history.push('/profile');
         } catch (err) {
@@ -38,10 +39,17 @@ export default function Logon() {
                     <h1>Faça seu logon</h1>
 
                     <input
-                    placeholder="Sua ID"
+                    placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     />
+                    <input
+                    type="password"
+                    placeholder="Sua senha"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    />
+
                     <button className='button' type="submit">Entrar</button>
                     
                     <Link className="back-link" to="/register">
