@@ -1,3 +1,7 @@
+.body-off {
+    background-color: #5F5F5F;
+}
+
 .suportButton button{
     display: flex;
     background-color: #dcdce6;
@@ -15,35 +19,36 @@
     
 }
 
-.profile-container {
+.profile-container-on {
     width: 100%;
     max-width: 1180px;
     min-height: 480px;
     padding: 0 30px;
     margin: 32px auto;
+    background-color: #f0f0f5;
 }
 
-.profile-container header {
+.profile-container-on header {
     display: flex;
     align-items: center;
 }
 
-.profile-container header span {
+.profile-container-on header span {
     font-size: 1.4rem;
     margin-left: 24px;
 }
 
-.profile-container header img {
+.profile-container-on header img {
     height: 64px;
 }
 
-.profile-container header a {
+.profile-container-on header a {
     width: 260px;
     margin-left: auto;
     margin-top: 0;
 }
 
-.profile-container header button {
+.profile-container-on header button {
     height: 60px;
     width: 60px;
     border-radius: 4px;
@@ -53,32 +58,32 @@
     transition: border-color 0.2s;
 }
 
-.profile-container header button:hover {
+.profile-container-on header button:hover {
     border-color: #DB3B3B;
     opacity: 1;
 }
 
-.profile-container h1 {
+.profile-container-on h1 {
     font-size: 1.6em;
     margin-top: 80px;
     margin-bottom: 2.4rem;
 }
 
-.profile-container ul {
+.profile-container-on ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 24px;
     list-style: none;
 }
 
-.profile-container ul li {
+.profile-container-on ul li {
     background: #fff;
     padding: 30px;
     border-radius: 8px;
     position: relative;
 }
 
-.profile-container ul li button{
+.profile-container-on ul li button{
     color: #80C55F;
     position: absolute;
     right: 24px;
@@ -88,35 +93,173 @@
     background: transparent;
 }
 
-.profile-container ul li button:hover {
+.profile-container-on ul li button:hover {
     opacity: 0.6;
 }
 
-.profile-container ul li button + button {
+.profile-container-on ul li button + button {
     position: absolute;
     right: 24px;
     top: 90px;
 }
 
-.profile-container ul li button + button:hover {
+.profile-container-on ul li button + button:hover {
     opacity: 0.6;
 }
 
-.profile-container ul li strong {
+.profile-container-on ul li strong {
     font-size: 1.1rem;
     display: block;
     margin-bottom: 5px;
     color: #41414d;
 }
 
-.profile-container ul li p + strong {
+.profile-container-on ul li p + strong {
     margin-top: 32px;
 }
 
-.profile-container ul li p {
+.profile-container-on ul li p {
     margin-left: 10px;
     margin-right: 10px;
     color: #737380;
     line-height: 21px;
     font-size: 1rem;
+}
+
+.profile-container-on  .button01 {
+    height: 60px;
+    background: #0078E7;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 4.0rem;
+}
+
+.profile-container-off {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 480px;
+    padding: 0 30px;
+    margin: auto;
+    background-color: #5F5F5F;
+    border-radius: 20px;
+}
+
+.profile-container-off header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.profile-container-off header span {
+    font-size: 1.4rem;
+    margin-left: 24px;
+    color: #fff;
+}
+
+.profile-container-off header img {
+    height: 64px;
+}
+
+.profile-container-off header a {
+    width: 260px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.profile-container-off header button {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin-left: 16px;
+    transition: border-color 0.2s;
+}
+
+.profile-container-off header button:hover {
+    border-color: #DB3B3B;
+    opacity: 1;
+}
+
+.profile-container-off h1 {
+    font-size: 1.6em;
+    margin-top: 80px;
+    margin-bottom: 2.4rem;
+    color: #fff;
+}
+
+.profile-container-off ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+    list-style: none;
+    padding: 20px 0;
+}
+
+.profile-container-off ul li {
+    background-color: #8D8D8D;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.profile-container-off ul li button{
+    color: #80C55F;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border: 0px solid #dcdce6;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.profile-container-off ul li button:hover {
+    opacity: 0.6;
+}
+
+.profile-container-off ul li button + button {
+    position: absolute;
+    right: 24px;
+    top: 90px;
+}
+
+.profile-container-off ul li button + button:hover {
+    opacity: 0.6;
+}
+
+.profile-container-off ul li strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.profile-container-off ul li p + strong {
+    margin-top: 32px;
+}
+
+.profile-container-off ul li p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(238, 238, 238);
+    line-height: 21px;
+    font-size: 1rem;
+}
+
+.profile-container-off  .button01 {
+    height: 60px;
+    background: #fff;
+    color: #8D8D8D;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 4.0rem;
 }

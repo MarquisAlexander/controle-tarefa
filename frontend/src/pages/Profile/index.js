@@ -18,7 +18,8 @@ export default function Profile() {
 
     const history = useHistory()
 
-
+    const [state, setState] = useState({isSwitchOn: false});
+        
 
     useEffect(() => {
         api.get('profile', {
@@ -28,7 +29,6 @@ export default function Profile() {
         }).then(response => {
             setTasks(response.data)
         })
-
     }, [userId])
 
     async function handleTerminarTarefa(id) {
@@ -56,9 +56,14 @@ export default function Profile() {
         history.push('/suport');
     }
 
+    console.log(state.isSwitchOn)
+
     return (
+        
         <>
-        <div className="profile-container">
+        <div className={state.isSwitchOn ? "body-on" : "body-off"}>
+
+        <div className={state.isSwitchOn ? "profile-container-on" : "profile-container-off"}>
             <header>
                 <img src={logoImg} alt="minhas tarefas" />
                 <span> Bem vindo(a), {userName}</span>
@@ -67,6 +72,9 @@ export default function Profile() {
                 <button onClick={handleLogout}type="button">
                     <FiPower size={18} color="#0078E7" />
                 </button>
+                <button 
+                value={state}
+                onClick={() => setState({isSwitchOn: !state.isSwitchOn})} />
             </header>
 
             <h1>Tarefas encontradas</h1>
@@ -104,7 +112,8 @@ export default function Profile() {
                     <button onClick={handleBackProfile}>
                     <FaInbox size={30} color="#0078E7" /> <p>Entre em contato com a nossa equipe</p>
                 </button>
-        </div>     
+        </div>
+        </div>    
 </>
     );
 }
