@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
-import { FaCalendarCheck, FaCheck, FaInbox }from "react-icons/fa";
+import { FaCheck, FaInbox, FaSun }from "react-icons/fa";
+import { BsSun } from "react-icons/bs"
 
 import api from '../../services/api';
 
@@ -24,7 +25,7 @@ export default function Profile() {
     useEffect(() => {
         api.get('profile', {
             headers: {
-                Authorization: userId,
+                authorization: userId,
             }
         }).then(response => {
             setTasks(response.data)
@@ -61,7 +62,7 @@ export default function Profile() {
     return (
         
         <>
-        <div className={state.isSwitchOn ? "body-on" : "body-off"}>
+      <div className={state.isSwitchOn ? "body-on" : "body-off"}>
 
         <div className={state.isSwitchOn ? "profile-container-on" : "profile-container-off"}>
             <header>
@@ -69,12 +70,15 @@ export default function Profile() {
                 <span> Bem vindo(a), {userName}</span>
 
                 <Link className="button01" to="/task/new">Cadastrar nova tarefa</Link>
+
                 <button onClick={handleLogout}type="button">
                     <FiPower size={18} color="#0078E7" />
                 </button>
-                <button 
+                <buttonMode 
                 value={state}
-                onClick={() => setState({isSwitchOn: !state.isSwitchOn})} />
+                onClick={() => setState({isSwitchOn: !state.isSwitchOn})}>
+                    <FaSun size={22} color="#0078e7" />
+                </buttonMode>
             </header>
 
             <h1>Tarefas encontradas</h1>
@@ -107,12 +111,15 @@ export default function Profile() {
                 </li>
                 ))}
             </ul>
-        </div>
-        <div className="suportButton">
+            <div className="div-button">
+            <div className="suportButton">
                     <button onClick={handleBackProfile}>
                     <FaInbox size={30} color="#0078E7" /> <p>Entre em contato com a nossa equipe</p>
                 </button>
+            </div>
         </div>
+        </div>
+
         </div>    
 </>
     );
